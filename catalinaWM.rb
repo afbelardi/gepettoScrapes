@@ -1,7 +1,8 @@
 require 'mechanize'
-require 'awesome_print'
-require 'net/http'
-require 'uri'
+
+
+# _________________Server________
+
 
 general_sites = [
     "https://www.lovebscott.com/",
@@ -31,8 +32,8 @@ general_sites.each do |site|
                 holder.push(data)
             end
         end
-    ap holder.length.to_s + " [ posts total] ==> Now Scraping -->  " + site
-# getAllPosts()=>
+        # pp holder.to_json
+    # pp holder.length.to_s + " [ posts total] ==> Now Scraping -->  " + site
 end
-ap holder
+
 
