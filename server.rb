@@ -3,8 +3,8 @@ require 'mechanize'
 require 'awesome_print'
 
 port = ENV.fetch("PORT",2000).to_i
-server = TCPServer.new(port)
-puts "Listening on port #{port}..."
+    server = TCPServer.new(port)
+        puts "Listening on port #{port}..."
 
 loop do
     client = server.accept
@@ -24,10 +24,9 @@ loop do
         "http://karencivil.com/",
         "https://www.revolt.tv/"
         
-    ]
- 
-    agent = Mechanize.new
+    ]     
     holder=[]
+    agent = Mechanize.new
     
     general_sites.each do |site|
         page=agent.get(site);
@@ -38,10 +37,10 @@ loop do
                     holder.push(data)
                 end
             end
-            # pp holder.to_json
+            # Convert to JSON()? 
+        # pp holder.to_json
         ap holder.length.to_s + " [ posts total] ==> Now Scraping -->  " + site
     end
-    client.write(holder)
-    
+        client.write(holder)
     client.close
 end
