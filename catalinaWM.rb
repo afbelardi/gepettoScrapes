@@ -25,8 +25,8 @@ agent = Mechanize.new
 holder=[]
 general_sites.each do |site|
     page=agent.get(site);
-    newRet = page.search('a')
-        newRet.each do |e|
+    newReturn = page.search('a')
+        newReturn.each do |e|
             data = e.attr('href').to_s
             if(data.length > 50)
                 holder.push(data)

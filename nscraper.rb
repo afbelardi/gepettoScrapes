@@ -32,7 +32,6 @@ require 'uri'
 
 #         general_sites.each do |site|
 #             page=agent.get(site);
-#             # ap  site + "SCRAPED"
 #             # rtnVal = page.search(x)
 #             newRet = page.search('a')
 #             ap newRet
@@ -47,6 +46,12 @@ require 'uri'
             # )
         end
     end
+
+
+
+
+
+
 # Scrape Links as url and fetch inner-content
 
 
@@ -86,7 +91,6 @@ require 'uri'
             # end
         # end 
    
-
 
 
 # Individual Site Scrapes
